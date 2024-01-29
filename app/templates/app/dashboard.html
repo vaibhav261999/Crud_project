@@ -1,0 +1,51 @@
+{% extends 'app/base.html' %}
+{% block content %}
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/signup_style.css' %}">
+    <style>
+        body{
+            background:linear-gradient(90deg,
+             
+             #de13f9 0%, #c883ed 25%, #958dc8 50%, #88aae3 75%, #7bbce0 100%);
+        }
+        .submit input{
+            margin: 20px;
+
+        }
+        h1{
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="content_box">
+        <div class="signup_box">
+            <form action="{% url 'query' %}" method="post">
+                {% csrf_token %}
+                <h1>Dashboard</h1>
+
+                <hr>
+                <div>
+                    <input type="email" name="email" required placeholder="Enter Email" readonly value={{Email}}>
+                </div>
+                <div>
+                    <input type="text" name="Query" required placeholder="Enter Query">
+                </div>
+            
+                <div class="submit">
+                    <input type="submit" value="Query">
+                </form>
+                    
+                    
+                    <form action=" {% url 'ShowData' pk=Email %}" method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Show Query">
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endblock %}

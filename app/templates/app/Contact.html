@@ -1,0 +1,84 @@
+{% extends 'app/base.html' %}
+{% block content %}
+{% load static %}
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-image: url('{% static 'images\37129065.jpg' %}') ;
+        background-repeat:no-repeat;
+        background-position-x: center;
+    
+    }
+    .Contact{
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+        
+
+    }
+    .track{
+        color: red;
+        padding: 30px;
+        height: 200px;
+        padding:40px ;
+        background-color: #9ee2f782;
+        border-radius: 20px;
+        box-shadow: 0 0 20px 2px rgb(86, 76, 76);
+    }
+    .track button{
+        padding: 17px;
+        border-radius: 10px;
+        /* border: 2px solid rgb(255, 149, 0); */
+        background-color:#0d6efd;
+        margin-top: 20px;
+        color: #fff;
+        
+    }
+    .help{
+        /* border: 1px solid black ; */
+        
+        height: 500px;
+        padding:40px ;
+        background-color: #9ee2f782;
+        border-radius: 20px;
+        box-shadow: 0 0 20px 2px rgb(86, 76, 76);
+
+    }
+    .help h2{
+        color: red;
+        font-size: 40px;
+        border-bottom: 0.5px solid;
+    }
+   
+
+</style>
+
+<body>
+    <div class="Contact">
+        <div class="help">
+            <div> <h2>HELP CENTER</h2>
+            <p>We are here to help you</p></div>
+            <div>
+                <h4>SELECT QUERY TYPE</h6>
+                    <h6> <a href="#">SELECT QUERY TYPE</a>       </h6>
+                    <h6> <a href=""> Order Related Queries</a>   </h6>
+                    <h6> <a href=""> Non-order Related Issues</a></h6>
+                    <h6> <a href=""> Recent Issues </a>          </h6>
+            </div>
+        </div>
+        
+        
+        <div class="track">
+                <h5>TRACK, CANCEL, RETURN/EXCHANGE</h5>
+                <hr>
+                <button >TRACK ORDER</button>
+        
+        </div>
+
+    </div>
+
+
+    
+</body>
+{% endblock%}

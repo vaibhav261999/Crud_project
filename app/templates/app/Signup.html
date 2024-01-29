@@ -1,0 +1,50 @@
+{% extends 'app/base.html' %}
+{% block content %}
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/signup_style.css' %}">
+    
+</head>
+
+<body>
+    <div class="content_box">
+        <div class="signin_img_box">
+            <img src="{% static 'images\signin-image.jpg' %}" alt="#">
+        </div>
+
+        <div class="signup_box">
+            <form action="{% url 'savedata' %}" method="post">
+                {% csrf_token %}
+                <h1>SIGN UP</h1>
+                <p style="color: red;">{{ msg }}</p>
+                <hr>
+                <div>
+                    <input type="text" name="Name" required placeholder="Enter Name">
+                </div>
+                <div>
+                    <input type="email" name="email" required placeholder="Enter Email">
+                </div>
+                <div>
+                    <input type="text" name="number" required placeholder="Enter Phone no.">
+                </div>
+                <div>
+                    <input type="password" name="password" required placeholder="Enter password">
+                </div>
+
+                <div>
+					<input type="password" name="cpassword" placeholder="Confirm Password" required>   
+                </div>
+                <p style="color: red;">{{incoreectmsg}}</p>
+
+
+                <div class="submit">
+                    <input type="submit" value="SIGN-UP">
+                </div>
+
+            </form>
+            <br>
+            <p>I have an Account <a href="{% url 'Login' %}">Login Now </a></p> 
+        </div>
+    </div>
+{% endblock%}

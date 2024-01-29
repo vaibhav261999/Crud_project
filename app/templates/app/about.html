@@ -1,0 +1,49 @@
+
+{% extends 'app/base.html' %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="">
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: #f8debf;
+    }
+    .about{
+        display: flex;
+        align-items: center;
+        margin-top: 80px;
+    }
+    .about_cont h2{
+        color:  #06066d;
+      
+
+    }
+    .about_cont p{
+        color:  #6565d3;
+      
+
+    }
+    
+</style>
+
+<body>
+    <div class="about">
+        <div class="about_img">
+            <img src="{% static 'images\about-img.png' %}" alt="">
+
+        </div>
+        <div class="about_cont">
+            <h2>ABOUT US</h2><hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Corrupti dolorem eum consequuntur ipsam repellat dolor 
+                soluta aliquid laborum, eius odit consectetur vel quasi 
+                in quidem, eveniet ab est corporis tempore.
+            </p>
+
+        </div>
+    </div>
+    
+</body>
+{% endblock%}

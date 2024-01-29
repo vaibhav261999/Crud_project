@@ -1,0 +1,56 @@
+{% extends 'app/base.html' %}
+{% block content %}
+
+{% load static %}
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/signup_style.css' %}">  
+    <style>
+        body{
+    margin: 0;
+    padding: 0;
+    background-color: #a3dee4;
+}
+    </style>
+</head>
+<body>
+   
+    <div class="content_box">
+        <div class="img_box">
+            <img src="{% static 'images\loging.png' %}" alt="#">
+
+        </div>
+
+        <div class="login_box">
+             <div class="login_logo">
+                <img src="{% static 'images\login_logo.png' %}" alt="#">
+                
+            </div>
+
+            <form action="{% url 'Login_data' %}" method="post">
+                {% csrf_token %}
+                <div>
+                    <input type="email" name="email" placeholder="Enter E-mail" required>
+                </div>
+                <div>
+                    <input type="password" name="password" placeholder="Enter Password" required>
+                </div>
+                <center>
+                    <div><p style="color: red; "> {{incoreectmsg}} </p></div>
+                </center>
+
+
+
+                <div class="submit">
+                    <input type="submit" value="LOG-IN">
+                </div>
+
+            </form>
+            <br>
+            <div class="acc"> <p> Don't have an Account? <a href="{% url 'Signup' %}">Register Now </a></p></div>
+
+
+        </div>
+    </div>
+
+{% endblock%}

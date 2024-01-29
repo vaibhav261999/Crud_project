@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.img_box img{
+    width: 400px;
+}
+
+.content_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.signup_box input{
+    height: 50px;
+    width: 400px;
+    margin: 20px;
+    border-radius: 20px;
+    border: 0px solid #550fec;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 0 10px 0 #550fec;
+    
+}
+
+
+.signup_submit input{
+    width: 150px;
+    height: 40px;
+    margin: 0;
+    background-color: #fcc35f;
+    border:0;
+    box-shadow: 0 0 10px 0px #877c7c;
+    /* color: #45b1ef; */
+}
+.signup_submit {
+    margin-top:20px ;
+    display: flex;
+    justify-content: center;
+
+}

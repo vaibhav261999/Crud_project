@@ -1,0 +1,26 @@
+{% extends 'app/base.html' %}
+{% block content %}
+    <h1>Update</h1>
+    <form action="{% url 'Update' upId=edi.id %}" method="post">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name" value="{{user.name}}" required readonly></td>
+
+                <td>Contact</td>
+                <td><input type="text" name="number" value="{{user.Contact}}" required readonly ></td>
+                
+                <td>E_mail</td>
+                <td><input type="text" name="UpdataEmail" value="{{edi.QueryEmail}}" required ></td>
+
+                <td>Query</td>
+                <td><input type="text" name="UpdataQuery" value="{{edi.Query}}" required ></td>
+                
+                
+            </tr>
+        </table>
+        <input type="submit" value="Update">
+    </form>
+
+    {% endblock%}

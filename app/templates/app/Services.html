@@ -1,0 +1,84 @@
+
+{% extends 'app/base.html' %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="">
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: #c8e8e0;
+    }
+    .services{
+        text-align: center;
+    }
+
+    .service_box img{
+        width: 280px;
+    }
+    .service_box{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px;
+    }
+    .service_box div{
+        padding: 10px;
+        background-color: #fff;
+        height: 500px;
+        width: 350px;
+        border-radius:20px ;
+    }
+    .service_box button{
+        background-color: #2e937a;
+        color: #fff;
+        border-radius: 30px;
+        height: 35px;
+        width: 110px;
+        text-align: center;
+        border: 0;
+    }
+    .services h1, h3{
+        color: #2e937a;
+        font-family:sans-serif;
+    }
+    
+    
+</style>
+
+<body>
+    <div class="services">
+        <h1>Our Features & Services</h1>
+        <div class="service_box">
+            <div class="box_1">
+                <img src="{% static 'images\bubbles.jpg' %}" alt="">
+                <h3>Communications</h3>
+                <p>Pretium lectus quam id leo in vitae turpis. Mattis pellentesque id nibh tortor id.</p>
+                <button>MORE</button>
+                
+
+            </div>
+
+            <div class="box_2">
+                <img src="{% static 'images\fdf.jpg' %}" alt="">
+                <h3>Inspired Design</h3>
+                <p>Nunc consequat interdum varius sit amet mattis vulputate enim nulla. Risus feugiat.</p>
+                <button>MORE</button>
+
+            </div>
+
+            <div class="box_3">
+                <img src="{% static 'images\dsds.jpg' %}" alt="">
+                <h3>Happy Customers</h3>
+                <p>Nisl purus in mollis nunc sed id semper. Rhoncus aenean vel elit scelerisque mauris.</p>
+                <button>MORE</button>
+
+            </div>
+
+        </div>
+
+       
+    </div>
+    
+</body>
+{% endblock%}

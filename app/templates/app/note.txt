@@ -1,0 +1,25 @@
+ <!-- <a class="nav-link" href="{% url 'about' %}">About</a>
+              <a class="nav-link" href="{% url 'Contact' %}">Contact</a>
+              <a class="nav-link" href="{% url 'Services' %}">Services</a>
+              <a class="nav-link" href="{% url 'Signup' %}">Sign-up</a>
+              <a class="nav-link" href="{% url 'Login' %}">Login</a> -->
+              
+
+              <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+
+               <!-- <link rel="stylesheet" href="{% static 'css\log.css' %}"> -->
+
+
+
+
+                <img src="{% static 'images\laptop.jpg' %}" alt="#">
+
+
+
+                 <div class="img_box">
+            <img src="{% static 'images\loging.png' %}" alt="#">
+        </div>
+
+         <!-- <div class="login_logo">
+                <img src="{% static 'images\login_logo.png' %}" alt="#">
+            </div> -->
